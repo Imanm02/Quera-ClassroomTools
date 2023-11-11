@@ -52,6 +52,9 @@ Before running the script, ensure you have the correct URL of the Quera class an
 
 ```shell
 python email_collector.py
+```
+
+The script will create a data.csv file containing the email addresses of the students.
 
 ### 3. Data Collector (`data_collector.py`)
 Gathers comprehensive information about students in a Quera class, including IDs, emails, and names, and organizes it into a CSV file.
