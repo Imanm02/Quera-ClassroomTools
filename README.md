@@ -50,9 +50,20 @@ This script fetches detailed information about questions from a Quera course.
 - For each question in the problem set, extracts details like the question name, exercise name, link, and score.
 - Prints the collected information in a formatted manner.
 
-
 ### 4. Question Info Extractor (`question_info_extractor.py`)
 Retrieves detailed information about Quera class questions, such as names, exercise names, links, and scores.
+
+### Data Collector (`data_collector.py`)
+
+This script gathers comprehensive data about students in a Quera class.
+
+- It starts by opening a CSV file to store the extracted data.
+- A session is initiated using `requests` to handle HTTP requests, along with the necessary cookies for authentication.
+- The script then loops through a specified number of pages (26 in this case).
+- For each page, it fetches the HTML content and parses it using `BeautifulSoup`.
+- It iterates through each row in the class table, filtering rows based on student IDs.
+- For each relevant row, it extracts the student's ID, name, and email, and writes this data to the CSV file.
+
 
 ### 5. Submission Delay Analyzer (`submission_delay_analyzer.py`)
 Analyzes submission delays on Quera, correlating them with student IDs and providing insights into submission patterns.
