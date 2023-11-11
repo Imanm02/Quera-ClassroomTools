@@ -1,22 +1,22 @@
 from bs4 import BeautifulSoup
 import requests
 import re
+import csv
 
-session = requests.Session()
-cookies = {'session_id': '31jzn0j0xbrtbl48ioab2qoxicr0ls71'}
-text = requests.get('https://quera.org/course/6600/', cookies=cookies).text
-soup = BeautifulSoup(text, features='html.parser')
-rows = soup.find_all('div', attrs={'class': 'menu'})[0].find_all('a')
-problemsets = []
-for row in rows:
-    problemsets.append({'title': row['data-text'].strip(),
-                        'link': 'https://quera.org' + row['href'].splitlines()[0].strip()})
-for problemset in problemsets:
-    text = requests.get(problemset['link'], cookies=cookies).text
-    soup = BeautifulSoup(text, features='html.parser')
-    qs = soup.find_all('a', attrs={'class': 'item problem_menu_item'})
-    for q in qs:
-        params = re.sub(' +', ' ', q.text).splitlines()
-        name = params[2]
-        score = params[-2]
-        print(f"{name}, {problemset['title']},  https://quera.ir{q['href'].splitlines()[0].strip()}, کصشر, {score}")
+with open('data.csv', 'w', encoding='utf-8', newline='') as f:
+    writer = csv.writer(f)
+    session = requests.Session()
+    page_count = 26
+    for count in range(1, page_count + 1):
+        text = session.get(f"https://quera.org/overview/course/3657/manage/edit_user/?page={count}", cookies= {'session_id': '47n484icce2onlj0zge5tvjffth5lbxq'}).text
+        soup = BeautifulSoup(text, features="html.parser")
+        rows = soup.tbody.find_all('tr')
+        for row in rows:
+            columns = row.find_all('td')
+            student_id = columns[0].input.get('value')
+            if not student_id or not student_id.strip().startswith('400'):
+                continue
+            data = [student_id, columns[1].text.strip(), columns[2].text.strip()]
+            print(data)
+            writer.writerow(data)
+    f.close()
