@@ -102,7 +102,7 @@ Make sure the script has the correct URL of the Quera course and the session coo
 python question_info_extractor.py
 ```
 
-
+The script will print the extracted information to the console.
 
 ### 5. Submission Delay Analyzer (`submission_delay_analyzer.py`)
 Analyzes submission delays on Quera, correlating them with student IDs and providing insights into submission patterns.
