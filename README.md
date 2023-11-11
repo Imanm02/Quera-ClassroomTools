@@ -126,6 +126,10 @@ Before running the script, prepare the necessary Excel file containing the Quera
 ```shell
 python submission_delay_analyzer.py
 
+The script will generate a out3.csv file containing the analysis of submission delays.
+
+
+
 ## Maintainer
 
 - [Iman Mohammadi](https://github.com/Imanm02)
