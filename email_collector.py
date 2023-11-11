@@ -6,10 +6,11 @@ import csv
 with open('emails.csv', 'w', encoding='utf-8', newline='') as f:
     writer = csv.writer(f)
     session = requests.Session()
+    class_id = 'your-class-id-here'
 
     # Loop through the pages of the class
     for page in range(1, 27):
-        response = session.get(f"https://quera.org/overview/course/3657/manage/edit_user/?page={page}")
+        response = session.get(f"https://quera.org/overview/course/{class_id}/manage/edit_user/?page={page}")
         soup = BeautifulSoup(response.text, 'html.parser')
 
         # Extract rows of data
