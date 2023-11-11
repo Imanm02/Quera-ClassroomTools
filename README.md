@@ -89,7 +89,7 @@ This script gathers comprehensive data about students in a Quera class.
 
 - It starts by opening a CSV file to store the extracted data.
 - A session is initiated using `requests` to handle HTTP requests, along with the necessary cookies for authentication.
-- The script then loops through a specified number of pages (26 in this case).
+- The script then loops through a specified number of pages (change it for your case).
 - For each page, it fetches the HTML content and parses it using `BeautifulSoup`.
 - It iterates through each row in the class table, filtering rows based on student IDs.
 - For each relevant row, it extracts the student's ID, name, and email, and writes this data to the CSV file.
