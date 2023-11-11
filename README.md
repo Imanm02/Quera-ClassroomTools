@@ -9,6 +9,19 @@ QueraClassroomTools is a repository containing a collection of Python scripts de
 ### 1. Score Compiler (`score_compiler.py`)
 Compiles student scores from Quera submissions. Takes an input Excel file with student IDs and outputs scores alongside these IDs.
 
+### Score Compiler (`score_compiler.py`)
+
+This script compiles student scores from Quera exercises.
+
+- It starts by reading student IDs from an Excel file using `pandas`.
+- Initializes data structures for storing questions and scores.
+- Walks through the directory structure to find folders for each question.
+- Prepares a dictionary to store scores, initializing each student's score for each question as 0.
+- Processes the result files in each directory, extracting scores using regular expressions.
+- Converts the scores dictionary to a DataFrame and joins it with the original DataFrame containing student IDs.
+- Finally, outputs the compiled scores to a new Excel file.
+
+
 ### 2. Email Collector (`email_collector.py`)
 Extracts and collects email addresses of students from a specific Quera class, saving the data in a CSV file.
 
