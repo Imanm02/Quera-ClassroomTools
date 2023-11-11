@@ -29,6 +29,8 @@ To use the Score Compiler, place the `students.xlsx` file in the same directory 
 python score_compiler.py
 ```
 
+This will generate an `Results.xlsx` file with compiled scores.
+
 ### 2. Email Collector (`email_collector.py`)
 Extracts and collects email addresses of students from a specific Quera class, saving the data in a CSV file.
 
