@@ -14,3 +14,6 @@ Extracts and collects email addresses of students from a specific Quera class, s
 
 ### 3. Data Collector (`data_collector.py`)
 Gathers comprehensive information about students in a Quera class, including IDs, emails, and names, and organizes it into a CSV file.
+
+### 4. Question Info Extractor (`question_info_extractor.py`)
+Retrieves detailed information about Quera class questions, such as names, exercise names, links, and scores.
