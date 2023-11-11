@@ -1,23 +1,22 @@
 from bs4 import BeautifulSoup
 import requests
+import re
 import csv
 
-# Write extracted data to a CSV file
-with open('emails.csv', 'w', encoding='utf-8', newline='') as f:
+with open('data.csv', 'w', encoding='utf-8', newline='') as f:
     writer = csv.writer(f)
     session = requests.Session()
-    class_id = 'your-class-id-here'
-
-    # Loop through the pages of the class
-    for page in range(1, 'number-of-pages-here'):
-        response = session.get(f"https://quera.org/overview/course/{class_id}/manage/edit_user/?page={page}", cookies= {'session_id': '{your-session-id-here}'}).text
-        soup = BeautifulSoup(response.text, 'html.parser')
+    page_count = 26
+    for count in range(1, page_count + 1):
+        text = session.get(f"https://quera.org/overview/course/3657/manage/edit_user/?page={count}", cookies= {'session_id': ''}).text
+        soup = BeautifulSoup(text, features="html.parser")
         rows = soup.tbody.find_all('tr')
-
-        # Extract rows of data
         for row in rows:
             columns = row.find_all('td')
-            if columns:
-                email = columns[2].text.strip()
-                writer.writerow([email])
+            student_id = columns[0].input.get('value')
+            if not student_id or not student_id.strip().startswith('400'):
+                continue
+            data = [columns[2].text.strip()]
+            print(data)
+            writer.writerow(data)
     f.close()
