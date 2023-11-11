@@ -23,7 +23,8 @@ for path, dirs, files in os.walk('.'):
     try:
         s = int(s)
     except:
-        continue
+        # For those who haven't entered their student number (actually haven't submitted any number)
+        pass
     if s not in students:
         continue
     with open(f'{path}\\result.txt', encoding="utf8") as file:
