@@ -10,7 +10,7 @@ with open('data.csv', 'w', encoding='utf-8', newline='') as f:
 
     # Iterate through each page of the course
     for count in range(1, page_count + 1):
-        response = session.get(f"https://quera.org/overview/course/3657/manage/edit_user/?page={count}", cookies={'session_id': ''}).text
+        response = session.get(f"https://quera.org/overview/course/{your_course_id}/manage/edit_user/?page={count}", cookies={'session_id': ''}).text
         soup = BeautifulSoup(response, features="html.parser")
         
         # Extract and write student emails
