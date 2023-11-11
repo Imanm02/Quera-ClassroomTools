@@ -12,6 +12,7 @@ with open('emails.csv', 'w', encoding='utf-8', newline='') as f:
     for page in range(1, 'number-of-pages-here'):
         response = session.get(f"https://quera.org/overview/course/{class_id}/manage/edit_user/?page={page}", cookies= {'session_id': '{your-session-id-here}'}).text
         soup = BeautifulSoup(response.text, 'html.parser')
+        rows = soup.tbody.find_all('tr')
 
         # Extract rows of data
         for row in soup.find_all('tr'):
