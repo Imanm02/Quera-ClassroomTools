@@ -9,7 +9,7 @@ with open('emails.csv', 'w', encoding='utf-8', newline='') as f:
     class_id = 'your-class-id-here'
 
     # Loop through the pages of the class
-    for page in range(1, 27):
+    for page in range(1, 'number-of-pages-here'):
         response = session.get(f"https://quera.org/overview/course/{class_id}/manage/edit_user/?page={page}")
         soup = BeautifulSoup(response.text, 'html.parser')
 
