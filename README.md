@@ -25,6 +25,9 @@ This script compiles student scores from Quera exercises.
 
 To use the Score Compiler, place the `students.xlsx` file in the same directory as the script. This file should contain student IDs in the first column. Also, ensure the question folders are properly organized in the same directory. Then run the script using:
 
+```shell
+python score_compiler.py
+```
 
 ### 2. Email Collector (`email_collector.py`)
 Extracts and collects email addresses of students from a specific Quera class, saving the data in a CSV file.
