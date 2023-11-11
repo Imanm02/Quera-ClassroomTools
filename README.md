@@ -21,6 +21,11 @@ This script compiles student scores from Quera exercises.
 - Converts the scores dictionary to a DataFrame and joins it with the original DataFrame containing student IDs.
 - Finally, outputs the compiled scores to a new Excel file.
 
+#### Example Usage
+
+To use the Score Compiler, place the `students.xlsx` file in the same directory as the script. This file should contain student IDs in the first column. Also, ensure the question folders are properly organized in the same directory. Then run the script using:
+
+
 ### 2. Email Collector (`email_collector.py`)
 Extracts and collects email addresses of students from a specific Quera class, saving the data in a CSV file.
 
