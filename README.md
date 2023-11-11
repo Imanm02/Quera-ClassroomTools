@@ -79,7 +79,6 @@ This script analyzes submission delays for Quera assignments.
 - It then filters the data for relevant students and analyzes the maximum delay for each student.
 - The final step is to prepare and output a CSV file, listing each student's ID, maximum delay, and any specified grades.
 
-
 ## Maintainer
 
 - [Iman Mohammadi](https://github.com/Imanm02)
