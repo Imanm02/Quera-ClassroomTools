@@ -6,7 +6,7 @@ import csv
 with open('data.csv', 'w', encoding='utf-8', newline='') as f:
     writer = csv.writer(f)
     session = requests.Session()
-    page_count = 26  # Total number of pages to scrape
+    page_count = {'your_page_count'}  # Total number of pages to scrape
 
     # Loop through each page
     for count in range(1, page_count + 1):
