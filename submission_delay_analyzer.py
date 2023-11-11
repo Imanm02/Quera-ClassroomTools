@@ -64,4 +64,4 @@ for stdn in std_list:
     final_output.append(out)
 
 # Save to CSV
-pd.DataFrame(final_output, columns=["sid", "late", *keep_grades]).to_csv("out3.csv")
+pd.DataFrame(final_output, columns=["sid", "late", *keep_grades]).to_csv("output.csv")
