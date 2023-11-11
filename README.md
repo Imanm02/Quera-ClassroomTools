@@ -94,6 +94,13 @@ This script gathers comprehensive data about students in a Quera class.
 - It iterates through each row in the class table, filtering rows based on student IDs.
 - For each relevant row, it extracts the student's ID, name, and email, and writes this data to the CSV file.
 
+#### Example Usage
+
+Make sure the script has the correct URL of the Quera course and the session cookies. Execute the script with:
+
+```shell
+python question_info_extractor.py
+
 ### 5. Submission Delay Analyzer (`submission_delay_analyzer.py`)
 Analyzes submission delays on Quera, correlating them with student IDs and providing insights into submission patterns.
 
