@@ -67,6 +67,19 @@ This script gathers comprehensive data about students in a Quera class.
 ### 5. Submission Delay Analyzer (`submission_delay_analyzer.py`)
 Analyzes submission delays on Quera, correlating them with student IDs and providing insights into submission patterns.
 
+### Submission Data Analyzer (`submission_data_analyzer.py`)
+
+This script analyzes submission delays for Quera assignments.
+
+- It begins with a function to read a list of student IDs from a file.
+- Constants are defined for identifying specific columns in the Quera output.
+- The script then loads the Quera results from an Excel file.
+- Columns relevant to grades and delays are identified and extracted.
+- Data cleaning includes filling missing values and converting student IDs using `unidecode`.
+- It then filters the data for relevant students and analyzes the maximum delay for each student.
+- The final step is to prepare and output a CSV file, listing each student's ID, maximum delay, and any specified grades.
+
+
 ## Maintainer
 
 - [Iman Mohammadi](https://github.com/Imanm02)
