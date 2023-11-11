@@ -70,6 +70,13 @@ This script fetches detailed information about questions from a Quera course.
 - For each question in the problem set, extracts details like the question name, exercise name, link, and score.
 - Prints the collected information in a formatted manner.
 
+#### Example Usage
+
+Ensure the script has access to the Quera class page and set the necessary session cookies. Run the script using:
+
+```shell
+python data_collector.py
+
 ### 4. Question Info Extractor (`question_info_extractor.py`)
 Retrieves detailed information about Quera class questions, such as names, exercise names, links, and scores.
 
