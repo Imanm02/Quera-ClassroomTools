@@ -11,7 +11,7 @@ with open('data.csv', 'w', encoding='utf-8', newline='') as f:
     # Loop through each page
     for count in range(1, page_count + 1):
         # Fetch the page content
-        text = session.get(f"https://quera.org/overview/course/3657/manage/edit_user/?page={count}", cookies={'session_id': '47n484icce2onlj0zge5tvjffth5lbxq'}).text
+        text = session.get(f"https://quera.org/overview/course/3657/manage/edit_user/?page={count}", cookies={'session_id': 'your_session_id'}).text
         soup = BeautifulSoup(text, features="html.parser")
         
         # Process each row in the table
