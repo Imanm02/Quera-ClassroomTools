@@ -20,3 +20,7 @@ Retrieves detailed information about Quera class questions, such as names, exerc
 
 ### 5. Submission Delay Analyzer (`submission_delay_analyzer.py`)
 Analyzes submission delays on Quera, correlating them with student IDs and providing insights into submission patterns.
+
+## Maintainer
+
+- [Iman Mohammadi](https://github.com/Imanm02)
