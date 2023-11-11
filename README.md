@@ -39,6 +39,18 @@ This script collects email addresses of students enrolled in a specific Quera cl
 ### 3. Data Collector (`data_collector.py`)
 Gathers comprehensive information about students in a Quera class, including IDs, emails, and names, and organizes it into a CSV file.
 
+#### Code Walkthrough
+
+This script fetches detailed information about questions from a Quera course.
+
+- Initiates a `requests` session with specific cookies for authentication.
+- Retrieves the main course page and parses it using `BeautifulSoup`.
+- Extracts links to each problem set.
+- Iterates through each problem set, fetching its page and parsing it.
+- For each question in the problem set, extracts details like the question name, exercise name, link, and score.
+- Prints the collected information in a formatted manner.
+
+
 ### 4. Question Info Extractor (`question_info_extractor.py`)
 Retrieves detailed information about Quera class questions, such as names, exercise names, links, and scores.
 
