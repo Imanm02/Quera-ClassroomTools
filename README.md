@@ -78,7 +78,7 @@ Ensure the script has access to the Quera class page and set the necessary sessi
 python data_collector.py
 ```
 
-
+This will result in a data.csv file with detailed student information.
 
 ### 4. Question Info Extractor (`question_info_extractor.py`)
 Retrieves detailed information about Quera class questions, such as names, exercise names, links, and scores.
