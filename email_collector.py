@@ -19,3 +19,4 @@ with open('emails.csv', 'w', encoding='utf-8', newline='') as f:
             if columns:
                 email = columns[2].text.strip()
                 writer.writerow([email])
+    f.close()
