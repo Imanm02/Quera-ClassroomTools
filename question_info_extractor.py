@@ -4,7 +4,7 @@ import re
 
 session = requests.Session()
 cookies = {'session_id': '31jzn0j0xbrtbl48ioab2qoxicr0ls71'}
-response = session.get('https://quera.org/course/6600/', cookies=cookies).text
+response = session.get('https://quera.org/course/'your_course_id'/', cookies=cookies).text
 soup = BeautifulSoup(response, features='html.parser')
 
 # Extract problem set information
