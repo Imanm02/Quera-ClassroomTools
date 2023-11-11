@@ -11,3 +11,6 @@ Compiles student scores from Quera submissions. Takes an input Excel file with s
 
 ### 2. Email Collector (`email_collector.py`)
 Extracts and collects email addresses of students from a specific Quera class, saving the data in a CSV file.
+
+### 3. Data Collector (`data_collector.py`)
+Gathers comprehensive information about students in a Quera class, including IDs, emails, and names, and organizes it into a CSV file.
