@@ -15,7 +15,7 @@ with open('emails.csv', 'w', encoding='utf-8', newline='') as f:
         rows = soup.tbody.find_all('tr')
 
         # Extract rows of data
-        for row in soup.find_all('tr'):
+        for row in rows:
             columns = row.find_all('td')
             if columns:
                 email = columns[2].text.strip()
