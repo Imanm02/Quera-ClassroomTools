@@ -36,7 +36,6 @@ This script collects email addresses of students enrolled in a specific Quera cl
 - Filters out rows without valid student IDs or those not starting with '400'.
 - Extracts the email from the relevant column and writes it to the CSV file.
 
-
 ### 3. Data Collector (`data_collector.py`)
 Gathers comprehensive information about students in a Quera class, including IDs, emails, and names, and organizes it into a CSV file.
 
