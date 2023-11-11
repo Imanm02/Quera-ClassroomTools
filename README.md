@@ -17,3 +17,6 @@ Gathers comprehensive information about students in a Quera class, including IDs
 
 ### 4. Question Info Extractor (`question_info_extractor.py`)
 Retrieves detailed information about Quera class questions, such as names, exercise names, links, and scores.
+
+### 5. Submission Delay Analyzer (`submission_delay_analyzer.py`)
+Analyzes submission delays on Quera, correlating them with student IDs and providing insights into submission patterns.
