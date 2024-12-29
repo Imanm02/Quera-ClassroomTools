@@ -129,6 +129,29 @@ python submission_delay_analyzer.py
 
 The script will generate a `output.csv` file containing the analysis of submission delays.
 
+### 6. Delay Extractor (`delay_extractor.py`)
+Extracts the delay times between assignment deadlines and actual submission times for each student in a Quera course.
+
+#### Code Walkthrough
+
+This script analyzes the time differences between when assignments were due and when they were actually submitted.
+
+- It starts by establishing a session with `requests` to authenticate and access Quera's data.
+- Extracts assignment deadlines from each course page using `BeautifulSoup`.
+- Iterates over submissions for each assignment, calculating the delay by comparing the submission timestamp to the deadline.
+- Stores the results in a dictionary with student IDs as keys and lists of delays as values.
+- Outputs the delay data into a CSV file for further analysis or reporting.
+
+#### Example Usage
+
+Ensure that you have configured the necessary session cookies and have access to the Quera course pages. Run the script using:
+
+```shell
+python delay_extractor.py
+```
+
+This will generate a `delays.csv` file, detailing the submission delays for each student.
+
 ## Maintainer
 
 - [Iman Mohammadi](https://github.com/Imanm02)
